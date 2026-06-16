@@ -1,7 +1,7 @@
 // Common
 //$product-card-breakpoint: $ui-global-breakpoint;
 //$product-card-background-color: $ui-global-background;
-//$product-card-hover-image-scale: 1.25;
+$product-card-hover-image-scale: 1;
 //$product-card-hover-title-decoration: underline;
 
 //$product-card__mobile-margin: none;
@@ -23,11 +23,11 @@
 
 //$product-card__mobile-header-margin: none;
 //$product-card__mobile-header-padding: none;
-//$product-card__mobile-header-height: 138px;
+$product-card__mobile-header-height: 196px;
 
 //$product-card__desktop-header-margin: $product-card__mobile-header-margin;
 //$product-card__desktop-header-padding: $product-card__mobile-header-padding;
-//$product-card__desktop-header-height: 280px;
+$product-card__desktop-header-height: 397px;
 
 // Body
 //$product-card-body-background-color: none;

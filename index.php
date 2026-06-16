@@ -24,7 +24,7 @@ $mode = 'development'; // production|development
         <div class="ProductCardLayout">
             <?php for ($i = 0; $i < 20; $i++) { ?>
                 <div class="ProductCardLayout-item">
-                    <?php include 'templates/productCard.php' ?>
+                    <?php include 'templates/productCard/productCard.php' ?>
                 </div>
             <?php } ?>
         </div>

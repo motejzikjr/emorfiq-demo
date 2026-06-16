@@ -121,36 +121,36 @@ $product-card__desktop-header-height: 397px;
 //$product-card__desktop-footer-quantity-min-height: $product-card__mobile-footer-quantity-min-height;
 
 // Badges
-//$product-card__badges_positions: (
-  // name
-  //      primary: (
-  //              0: (// breakpoint
-  //                      position: absolute,
-  //                      inset: 0 auto auto 0,
-  //                      display: flex,
-  //                      flex-flow: row wrap,
-  //                      gap: 8px,
-  //              ),
-  //      ),
-  //      secondary: (
-  //              0: (
-  //                      margin: 0 0 10px 0,
-  //                      display: flex,
-  //                      flex-flow: row wrap,
-  //                      gap: 4px,
-  //              )
-  //      ),
-  //      tertiary: (
-  //              0: (
-  //                      position: absolute,
-  //                      inset: auto auto 16px 0,
-  //                      display: flex,
-  //                      flex-flow: column,
-  //                      align-items: flex-start,
-  //                      gap: 4px,
-  //              )
-  //      ),
-//);
+$product-card__badges_positions: (
+   name
+        primary: (
+                0: (// breakpoint
+                        position: absolute,
+                        inset: 0 auto auto 0,
+                        display: flex,
+                        flex-flow: row wrap,
+                        gap: 8px,
+                ),
+        ),
+        secondary: (
+                0: (
+                        margin: 0 0 10px 0,
+                        display: flex,
+                        flex-flow: row wrap,
+                        gap: 4px,
+                )
+        ),
+        tertiary: (
+                0: (
+                        position: absolute,
+                        inset: auto 12px 12px 12px,
+                        display: flex,
+                        flex-flow: row wrap,
+                        align-items: flex-start,
+                        gap: 8px,
+                )
+        ),
+);
 
 // Like
 //$product-card__mobile-like-inset: auto 20px 20px auto;
@@ -292,3 +292,123 @@ $product-card__desktop-header-height: 397px;
 //$productCard-priceHistory__desktop-fontWeight: $productCard-priceHistory__mobile-fontWeight;
 //$productCard-priceHistory__desktop-textAlign: $productCard-priceHistory__mobile-textAlign;
 //$productCard-priceHistory__desktop-color: $productCard-priceHistory__mobile-color;
+
+// Badges
+$badge-types: (
+        text: (// name
+                '': (
+                        0: (// breakpoint
+                                line-height: 1,
+                                font-weight: $ui-fw-bold,
+                                --badgeColor: var(--color, $ui-color-gray-500),
+                        ),
+                ),
+        ),
+        rectangle: (
+                '': (
+                        0: (
+                                padding: 4px 12px,
+                                font-size: 1.1rem,
+                                line-height: 1.5,
+                                font-weight: $ui-fw-extrabold,
+                                text-transform: uppercase,
+                                border-radius: 3px,
+                                background-color: var(--background, $ui-color-gray-500),
+                                --badgeColor: var(--color, $ui-color-white),
+                        )
+                ),
+        ),
+        rectangleSide: (
+                '': (
+                        0: (
+                                padding: 0 8px 0 16px,
+                                font-size: var(--fs-300),
+                                line-height: 2,
+                                font-weight: $ui-fw-bolder,
+                                border-radius: 0 50px 50px 0,
+                                background-color: var(--background, $ui-color-gray-500),
+                                --badgeColor: var(--color, $ui-color-white),
+                        ),
+                ),
+        ),
+        circle: (
+                '': (
+                        0: (
+                                display: flex,
+                                align-items: center,
+                                justify-content: center,
+                                width: 32px,
+                                height: 32px,
+                                font-size: var(--fs-400),
+                                line-height: 1,
+                                font-weight: 700,
+                                border-radius: 50%,
+                                background-color: var(--background, $ui-color-gray-500),
+                                --badgeColor: var(--color, $ui-color-white),
+                        ),
+                        lg: (
+                                width: 54px,
+                                height: 54px,
+                                font-size: var(--fs-500),
+                        ),
+                ),
+                large: (
+                        0: (
+                                display: flex,
+                                align-items: center,
+                                justify-content: center,
+                                width: 40px,
+                                height: 40px,
+                                font-size: var(--fs-400),
+                                line-height: 1,
+                                font-weight: 700,
+                                border-radius: 50%,
+                                background-color: var(--background, $ui-color-gray-500),
+                                --badgeColor: var(--color, $ui-color-white),
+                        ),
+                        lg: (
+                                width: 54px,
+                                height: 54px,
+                                font-size: var(--fs-500),
+                        ),
+                ),
+        ),
+        btn: (
+                '': (
+                        0: (
+                                padding: 6px 15px,
+                                font-size: var(--fs-400),
+                                line-height: 1.333,
+                                font-weight: $ui-fw-bold,
+                                border: 1px solid var(--color, $ui-color-gray-500),
+                                border-radius: $ui-global-border-radius,
+                                --badgeColor: var(--color, $ui-color-gray-500),
+                                background-color: $ui-color-white,
+                        ),
+                ),
+        ),
+        primary: (
+                '': (
+                        0: (
+                                --badgeColor: var(--color, $ui-color-white),
+                                background-color: $ui-color-badge-primary,
+                        ),
+                ),
+        ),
+        secondary: (
+                '': (
+                        0: (
+                                --badgeColor: var(--color, $ui-color-white),
+                                background-color: $ui-color-badge-secondary,
+                        ),
+                ),
+        ),
+        tertiary: (
+                '': (
+                        0: (
+                                --badgeColor: var(--color, $ui-color-white),
+                                background-color: $ui-color-badge-tertiary,
+                        ),
+                ),
+        ),
+) !default;

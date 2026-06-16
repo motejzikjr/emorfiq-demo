@@ -2,7 +2,7 @@
 //$product-card-breakpoint: $ui-global-breakpoint;
 //$product-card-background-color: $ui-global-background;
 $product-card-hover-image-scale: 1;
-//$product-card-hover-title-decoration: underline;
+$product-card-hover-title-decoration: none;
 
 //$product-card__mobile-margin: none;
 //$product-card__mobile-padding: 0 0 $spacer-1;
@@ -33,16 +33,16 @@ $product-card__desktop-header-height: 397px;
 //$product-card-body-background-color: none;
 
 //$product-card__mobile-body-margin: none;
-//$product-card__mobile-body-padding: $spacer-1 0 $spacer-0;
+$product-card__mobile-body-padding: 12px;
 
 //$product-card__desktop-body-margin: $product-card__mobile-body-margin;
-//$product-card__desktop-body-padding: $spacer-1 0;
+$product-card__desktop-body-padding: 12px;
 
 // Footer
 //$product-card-footer-background-color: none;
 
 //$product-card__mobile-footer-margin: none;
-//$product-card__mobile-footer-padding: 12px 0 0;
+$product-card__mobile-footer-padding: 12px;
 //$product-card__mobile-footer-height: none;
 
 //$product-card__desktop-footer-margin: $product-card__mobile-footer-margin;
@@ -412,3 +412,9 @@ $badge-types: (
                 ),
         ),
 ) !default;
+
+.ProductCard-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}

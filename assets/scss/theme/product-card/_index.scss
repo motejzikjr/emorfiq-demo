@@ -33,16 +33,16 @@ $product-card__desktop-header-height: 397px;
 //$product-card-body-background-color: none;
 
 //$product-card__mobile-body-margin: none;
-$product-card__mobile-body-padding: 12px;
+$product-card__mobile-body-padding: 12px 12px 4px 12px;
 
 //$product-card__desktop-body-margin: $product-card__mobile-body-margin;
-$product-card__desktop-body-padding: 12px;
+$product-card__desktop-body-padding: 12px 12px 4px 12px;
 
 // Footer
 //$product-card-footer-background-color: none;
 
 //$product-card__mobile-footer-margin: none;
-$product-card__mobile-footer-padding: 12px;
+$product-card__mobile-footer-padding: 4px 12px 12px 12px;
 //$product-card__mobile-footer-height: none;
 
 //$product-card__desktop-footer-margin: $product-card__mobile-footer-margin;
@@ -65,12 +65,12 @@ $product-card__mobile-footer-padding: 12px;
 // priceWrapper
 //$product-card__mobile-price-wrapper-margin: none;
 //$product-card__mobile-price-wrapper-padding: 0 0 8px;
-//$product-card__mobile-price-wrapper-height: 48px;
+$product-card__mobile-price-wrapper-height: auto;
 //$product-card__mobile-price-wrapper-align-self: center;
 
 //$product-card__desktop-price-wrapper-margin: $product-card__mobile-price-wrapper-margin;
 //$product-card__desktop-price-wrapper-padding: 0;
-//$product-card__desktop-price-wrapper-height: 40px;
+$product-card__desktop-price-wrapper-height: auto;
 //$product-card__desktop-price-wrapper-align-self: $product-card__mobile-price-wrapper-align-self;
 
 // Loyalty price
@@ -193,9 +193,9 @@ $product-card__badges_positions: (
 //$product-card__mobile-price-margin: none;
 //$product-card__mobile-price-padding: none;
 //$product-card__mobile-price-font-family: none;
-//$product-card__mobile-price-font-size: var(--fs-600);
+$product-card__mobile-price-font-size: var(--fs-400);
 //$product-card__mobile-price-line-height: 1.312;
-//$product-card__mobile-price-font-weight: $ui-fw-bolder;
+$product-card__mobile-price-font-weight: $ui-fw-extrabold;
 //$product-card__mobile-price-color: none;
 
 //$product-card__desktop-price-margin: $product-card__mobile-price-margin;
@@ -414,7 +414,18 @@ $badge-types: (
 ) !default;
 
 .ProductCard-title {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ProductCard-priceWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ProductCard-oldPrice {
+    font-size: var(--fs-400);
+    text-decoration: line-through;
 }

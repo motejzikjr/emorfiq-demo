@@ -1,5 +1,7 @@
+@import "../../mixins/breakpoints";
+
 // Common
-//$product-card-breakpoint: $ui-global-breakpoint;
+$product-card-breakpoint: $ui-global-breakpoint;
 //$product-card-background-color: $ui-global-background;
 $product-card-hover-image-scale: 1;
 $product-card-hover-title-decoration: none;
@@ -413,10 +415,12 @@ $badge-types: (
         ),
 ) !default;
 
-.ProductCard-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+@include media-breakpoint-up($product-card-breakpoint) {
+  .ProductCard-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
 }
 
 .ProductCard-priceWrapper {

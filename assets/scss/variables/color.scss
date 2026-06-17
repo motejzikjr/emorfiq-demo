@@ -55,11 +55,12 @@ $ui-color-error: #D81616 !default;
 
 //Other colors
 $ui-color-red: #D81616 !default;
+$ui-color-red-secondary: #D91242 !default;
 $ui-color-green: #0EAC5F !default;
 $ui-color-orange: #F75200 !default;
 $ui-color-yellow: #FFCB00 !default;
 
 //Badge colors
-$ui-color-badge-primary: $ui-color-primary-800 !default;
+$ui-color-badge-primary: #132736 !default;
 $ui-color-badge-secondary: #00519E !default;
-$ui-color-badge-tertiary: $ui-color-secondary-700 !default;
+$ui-color-badge-tertiary: $ui-color-red-secondary !default;

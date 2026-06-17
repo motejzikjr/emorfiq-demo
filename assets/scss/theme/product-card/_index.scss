@@ -1,4 +1,4 @@
-@import "../../mixins/breakpoints";
+@import "../../mixins";
 
 // Common
 $product-card-breakpoint: $ui-global-breakpoint;
@@ -432,4 +432,56 @@ $badge-types: (
 .ProductCard-oldPrice {
     font-size: var(--fs-400);
     text-decoration: line-through;
+}
+
+.ProductCard-variants {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    background-color: $ui-color-white;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity, visibility 0.2s ease-in-out);
+}
+
+.ProductCard:hover,
+.ProductCard:focus-visible,
+.ProductCard:focus-within  {
+  .ProductCard-variants {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.ProductCard-variantLabel {
+    font-size: var(--fs-400);
+    font-weight: $ui-fw-bold;
+}
+
+.ProductCard-variantList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.ProductCard-variantItem {
+    display: block;
+    padding: 4px 8px;
+    border: 1px solid $ui-color-black-400;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: $ui-fw-bold;
+    text-decoration: none;
+    @include transition(color, border-color 0.2s ease-in-out);
+
+    &:hover, &:focus-visible {
+        padding: 3px 7px;
+        border-radius: unset;
+        border: 2px solid $ui-color-red-secondary;
+        color: $ui-color-red-secondary;
+    }
 }
